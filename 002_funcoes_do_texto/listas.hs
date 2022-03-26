@@ -9,4 +9,4 @@ length' xs = sum [1 | _ <- xs]
 
 removeNonUppercase st = [ c | c <- st, c `elem` ['A'..'Z']]
 
-removerImpares xxs = [ [ x | x <- xs, even x ] | xs <- xxs]
+removerImpares xxs = [[ x | x <- xs, even x ] | xs <- xxs]
