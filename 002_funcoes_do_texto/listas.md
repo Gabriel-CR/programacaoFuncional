@@ -83,3 +83,60 @@ ghci> product [6, 2, 1, 2]
 ghci> 4 `elem` [3, 4, 5, 6]
 True
 ```
+
+# Criando listas
+
+> ```[1..20], ['a'.. 'c']```
+
+## Criando listas obedecendo sequências
+```Haskell
+ghci> [2,4..20]  
+[2,4,6,8,10,12,14,16,18,20]  
+ghci> [3,6..20]  
+[3,6,9,12,15,18]
+```
+
+## Listas com ponto flutuante
+⚠️ Por muitas vezes acabam sendo imprecisos
+```Haskell
+ghci> [0.1, 0.3 .. 1]  
+[0.1,0.3,0.5,0.7,0.8999999999999999,1.0999999999999999] 
+```
+
+## Listas infinitas
+```Haskell
+ghci> take 24 [13,26..]  
+[13,26,39,52,65,78,91,104,117,130,143,156,169,182,195,208,221,234,247,260,273,286,299,312]
+```
+
+### Funções com listas infinitas
+* cycle
+    ```Haskell
+    ghci> take 10 (cycle [1,2,3])  
+    [1,2,3,1,2,3,1,2,3,1]
+
+    ghci> take 12 (cycle "LOL ")  
+    "LOL LOL LOL " 
+    ```
+
+* Repeat
+    ```Haskell
+    ghci> take 10 (repeat 5)  
+    [5,5,5,5,5,5,5,5,5,5]
+    ```
+
+# Compressão de listas
+
+## Compressão
+```Haskell
+ghci> [x*2 | x <- [1..10]]  
+[2,4,6,8,10,12,14,16,18,20]
+```
+
+### Compressão de listas com o uso de condições
+* lista entre 50 e 100 com números com resto da divisão por 7 igual a 3
+```Haskell
+ghci> [ x | x <- [50..100], x `mod` 7 == 3]  
+[52,59,66,73,80,87,94]
+```
+
