@@ -2,15 +2,15 @@
 
 > let lostNumbers = [4, 8, 15, 16, 23, 48]
 
-<h2>CONCATENANDO LISTA</h2>
-    ~~~haskell
-    ghci> [1, 2, 3, 4] ++ [9, 10, 11, 12]
-    [1,2,3,4,9,10,11,12]
-    ghci> "Hello" ++ " " ++ "world"
-    "Hello world"
-    ghci> ['w', 'o'] ++ ['o', 't']
-    "woot"
-    ~~~
+<h2>Concatenando listas</h2>
+    ```haskell
+    ghci> [1, 2, 3, 4] ++ [9, 10, 11, 12]<br>
+    [1,2,3,4,9,10,11,12]<br>
+    ghci> "Hello" ++ " " ++ "world"<br>
+    "Hello world"<br>
+    ghci> ['w', 'o'] ++ ['o', 't']<br>
+    "woot"<br>
+    ```
 
 <h2>ADICIONANDO ELEMENTO NA LISTA</h2>
     ~~~haskell
