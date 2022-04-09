@@ -1,10 +1,8 @@
-elemento 0 xs = head xs
-elemento ind (x:xs)
-    | length xs < ind = elemento (ind - length xs - 1) xs
-    | ind < 0 = elemento (length xs + ind) xs
-    | otherwise = elemento (ind - 1) xs 
+elemento ind xs = xs !! i
+    where
+        i = if ind < 0 then length xs + ind else ind
 
 main = do
     a <- readLn :: IO Int
     b <- readLn :: IO [Int]
-    print $ elemento a b
+    print $ elemento a b    

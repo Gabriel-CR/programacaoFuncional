@@ -1,5 +1,4 @@
-total [] = 0
-total (_:xs) = 1 + total xs
+total xs = sum [1 | x <- xs]
 
 main = do
     a <- readLn :: IO [Int]
