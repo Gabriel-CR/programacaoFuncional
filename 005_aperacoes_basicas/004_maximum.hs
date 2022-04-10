@@ -1,9 +1,5 @@
 maior [x] = x
-maior (x:xs)
-    | x > maximoTail = x
-    | otherwise = maximoTail
-    where
-        maximoTail = maior xs
+maior (x:xs) = if x > maior xs then x else maior xs
 
 main = do
     a <- readLn :: IO [Int]
