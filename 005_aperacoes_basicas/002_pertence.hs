@@ -1,4 +1,4 @@
-pertence a b = elem a b
+pertence = elem
 
 main = do
     a <- readLn :: IO Int
