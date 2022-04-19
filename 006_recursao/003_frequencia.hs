@@ -1,5 +1,5 @@
 frequencia _ [] = 0
-frequencia a xs = if a == head xs then 1 +resto else resto
+frequencia a xs = if a == head xs then 1 + resto else resto
     where
         resto = frequencia a (tail xs)
 
