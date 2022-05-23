@@ -1,4 +1,3 @@
-concatmap :: (a -> [b]) -> [a] -> [b]
 concatmap fn xs = foldl func [] (map fn xs)
     where func acc x = acc ++ x
 
