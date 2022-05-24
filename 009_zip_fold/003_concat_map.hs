@@ -1,4 +1,6 @@
-concatmap fn xs = foldl func [] (map fn xs)
+myMap fn xs = [fn x | x <- xs]
+
+concatmap fn xs = foldl func [] (myMap fn xs)
     where func acc x = acc ++ x
 
 main = do
