@@ -14,8 +14,8 @@ exists y = foldl achou False
     where achou acc x = acc || (x == y)
 
 -- converte de digito para char
-dig2char :: (Eq a, Num a, Enum a) => a -> Char
-dig2char dig = '.'
+dig2char :: Int -> Char
+dig2char dig = snd $ zip [0..9] "0123456789" !! dig
 
 -- verifica se esse valor pode ser inserido nesse índice
 fit :: (String, Int) ->  Int -> Int -> Bool
