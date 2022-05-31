@@ -19,7 +19,10 @@ dig2char dig = snd $ zip [0..9] "0123456789" !! dig
 
 -- verifica se esse valor pode ser inserido nesse índice
 fit :: (String, Int) ->  Int -> Int -> Bool
-fit (xs, lim) index value = False
+fit (xs, lim) index value = not (exists charValue lista)
+    where
+        lista = neib xs index lim
+        charValue = dig2char value
 
 -- pega as posições de todos os .
 getHoles :: String -> [Int]
@@ -29,7 +32,7 @@ getHoles xs = snd $ foldl ponto (0, []) xs
 
 -- insere esse valor nesse index e retorna o novo vetor resultante
 set :: String -> Int -> Int -> String
-set xs index value = "..."
+set xs index value = take index xs ++ show value ++ drop (index + 1) xs
 
 -- tenta resolver o problema para essa posição
 -- se é possível resolver, retorna Just resposta, senão Nothing
