@@ -39,8 +39,8 @@ set xs index value = take index xs ++ show value ++ drop (index + 1) xs
 -- problema (xs, lim)
 -- holes: lista de posições a serem preenchidas
 -- hindex: posicao atual no vetor de holes
--- solve :: (String, Int) -> [Int] -> Int -> Maybe String
--- solve (xs, lim) holes hindex = ...
+solve :: (String, Int) -> [Int] -> Int -> Maybe String
+solve (xs, lim) holes hindex = Just "..."
 
 -- prepara a entrada para a função recursiva de resolução
 mainSolver :: String -> Int -> String
