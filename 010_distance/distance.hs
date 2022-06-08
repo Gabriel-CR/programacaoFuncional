@@ -40,7 +40,13 @@ set xs index value = take index xs ++ show value ++ drop (index + 1) xs
 -- holes: lista de posições a serem preenchidas
 -- hindex: posicao atual no vetor de holes
 solve :: (String, Int) -> [Int] -> Int -> Maybe String
-solve (xs, lim) holes hindex = Just "..."
+solve (xs, lim) holes hindex
+    | hindex == length holes = Just xs
+    | not $ null lista = solve(set xs buracos (head lista), lim) holes (hindex + 1)
+    | otherwise = solve (xs, lim) holes (hindex - 1)
+    where
+        lista = [ x | x <- [0..lim], fit (xs, lim) buracos x]
+        buracos = holes !! hindex
 
 -- prepara a entrada para a função recursiva de resolução
 mainSolver :: String -> Int -> String
