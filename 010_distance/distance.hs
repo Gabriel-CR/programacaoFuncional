@@ -44,7 +44,9 @@ solve (xs, lim) holes hindex = Just "..."
 
 -- prepara a entrada para a função recursiva de resolução
 mainSolver :: String -> Int -> String
-mainSolver xs lim = "..."
+mainSolver xs lim = fromJust (solve (xs, lim) buracos 0)
+    where
+        buracos = getHoles xs
 
 main :: IO ()
 main = do
