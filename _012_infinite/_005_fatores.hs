@@ -1,5 +1,7 @@
+factors :: b -> [(b, b)]
 factors num = [(num, num)]
 
+main :: IO ()
 main = do
     print $ factors 36 == [(2,2),(3,2)]
     print $ factors 50 == [(2,1),(5,2)]
